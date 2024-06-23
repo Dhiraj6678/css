@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* adjust height as needed */
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+
+  .hero-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: end; /* align image to the end of its grid area */
+  }
+
+  .hero-content {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto; /* adjust rows as per content */
+      height: auto; /* adjust height as per content */
+    }
+
+    .hero-image {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-self: center; /* center image on smaller screens */
+      margin-bottom: 20px;
+    }
+
+    .hero-content {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      text-align: center;
+      align-items: center;
+    }
+  }
+</style>
+<title>Healthy Food Restaurant</title>
+</head>
+<body>
+<section class="hero">
+  <img class="hero-image" src="https://media.istockphoto.com/id/1409236261/photo/healthy-food-healthy-eating-background-fruit-vegetable-berry-vegetarian-eating-superfood.webp?b=1&s=170667a&w=0&k=20&c=KdkqtpvIHgiMk4ZEqlXDt53NjYYszTccGrnHJKkecF0=" alt="Healthy Food Image">
+  <div class="hero-content">
+    <h1>Welcome to Our Healthy Food Restaurant</h1>
+    <p>Discover our delicious and nutritious meals made with fresh, organic ingredients. Join us in our mission for a healthier lifestyle!</p>
+    <!-- Add button or additional content as needed -->
+  </div>
+</section>
+</body>
+</html>
